@@ -1,0 +1,60 @@
+body {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-color: #87ceeb;
+  height: 120px;
+}
+
+.footer {
+  background-color: #dda0dd;
+  height: 80px;
+}
+
+.main {
+  background-color: #ff6767;
+  height: 300px;
+}
+
+.side1 {
+  background-color: #63d663;
+}
+.side2 {
+  background-color: #ffdd10;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+.container > * {
+  padding: 10px;
+  margin: 10px;
+  flex: 1 100%;
+}
+
+@media all and (min-width: 850px) {
+  .main {
+    flex: 3;
+    order: 2;
+  }
+  .side1 {
+    order: 1;
+  }
+  .side1 {
+    order: 2;
+  }
+  .footer {
+    order: 4;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .side {
+    flex: 1;
+  }
+}
